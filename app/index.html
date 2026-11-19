@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA 6 Trophy Guide &amp; Tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 GTA 6 trophies: checklist, roadmap, missables and cited guides.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <h1>Leonida Legend</h1>
+    <p class="sub">GTA 6 trophy guide &amp; tracker — 55 trophies · 1 platinum · 2 gold · 6 silver · 46 bronze · 28 hidden</p>
+  </div>
+  <div class="progress" id="progress" aria-live="polite">
+    <div class="big"><span id="earnedCount">0</span><span class="of">/ 55 earned</span></div>
+    <div class="bar" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBar"><span id="progressFill"></span></div>
+    <p class="grades" id="gradeCounts"></p>
+  </div>
+  <div class="controls">
+    <input id="search" type="search" placeholder="Search trophies…" aria-label="Search trophies" autocomplete="off">
+    <label class="spoiler"><input id="spoilerToggle" type="checkbox" checked> Hide story spoilers</label>
+    <button id="exportBtn" type="button">Export progress</button>
+    <button id="importBtn" type="button">Import progress</button>
+    <input id="importFile" type="file" accept="application/json,.json" hidden>
+  </div>
+  <nav class="tabs" id="tabs" aria-label="Guide sections">
+    <a href="#/" data-view="checklist">Checklist</a>
+    <a href="#/roadmap" data-view="roadmap">Roadmap</a>
+    <a href="#/missables" data-view="missables">Missables</a>
+    <a href="#/sources" data-view="sources">Sources</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section id="view-checklist" class="view" aria-label="Trophy checklist">
+    <div class="filters" id="filters" role="group" aria-label="Filter trophies">
+      <button type="button" data-kind="all" class="chip active">All 55</button>
+      <button type="button" data-kind="story" class="chip">Story</button>
+      <button type="button" data-kind="missable" class="chip">Missable</button>
+      <button type="button" data-kind="collectible" class="chip">Collectibles</button>
+      <button type="button" data-kind="activity" class="chip">Activities</button>
+      <button type="button" data-kind="robbery" class="chip">Robberies</button>
+      <label class="hide-earned"><input id="hideEarned" type="checkbox"> Hide earned</label>
+    </div>
+    <p class="count" id="listCount"></p>
+    <ul class="trophies" id="trophyList"></ul>
+    <p class="empty" id="emptyNote" hidden>No trophies match these filters.</p>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden aria-label="Roadmap to the platinum">
+    <h2>Roadmap to the platinum</h2>
+    <p class="lede">About 200 hours, in six stages. The story first, the one missable trophy early, then robberies, collectibles and cleanup. Almost everything stays open after the credits — there is no mission replay, so keep a manual save at the start of every chapter and one before the final mission.</p>
+    <ol class="stages" id="roadmapStages"></ol>
+  </section>
+
+  <section id="view-missables" class="view" hidden aria-label="Missable trophies">
+    <h2>Missable trophies</h2>
+    <p class="lede">Only one trophy in the whole list can be missed outright. Everything else stays available after the story — but a few strands are time-sensitive, so the notes below say exactly when to act.</p>
+    <ul class="trophies" id="missableList"></ul>
+    <div class="note" id="missableNote"></div>
+  </section>
+
+  <section id="view-sources" class="view" hidden aria-label="Sources">
+    <h2>Sources</h2>
+    <p class="lede">The trophy names, descriptions and grades are the official PlayStation list, as published by the trackers below. Every guide on this site is written in our own words from those descriptions; a guide cites the source each fact comes from, and never copies another guide's text.</p>
+    <ul class="sources" id="sourceList"></ul>
+    <p class="fine">No Rockstar Games logo, artwork, box art or game screenshot is used anywhere on this site. The look is our own. This guide is not affiliated with Rockstar Games, PlayStation, Exophase, PSNProfiles, Push Square or Output Lag.</p>
+  </section>
+</main>
+
+<aside id="detail" class="detail" hidden aria-label="Trophy detail">
+  <button id="detailClose" type="button" class="close" aria-label="Close detail">×</button>
+  <div id="detailBody"></div>
+</aside>
+
+<footer class="foot">
+  <p>Leonida Legend — an offline, open-source GTA 6 trophy guide &amp; tracker. Names, descriptions and grades are the official PlayStation list; the guides are our own words. Works with the network off; progress is saved only in your browser.</p>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
